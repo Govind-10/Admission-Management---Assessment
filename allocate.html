@@ -5,14 +5,10 @@
 <h3>Allocate Seat</h3>
 
 <form method="post" action="/allocate">
-
-  <!-- Applicant -->
   <label>Applicant</label><br>
-
   <select name="applicant" required>
 
-    <option value="">-- Select Applicant --</option>
-
+    <option value="">Select Applicant</option>
     {% for a in applicants %}
       <option value="{{ a.id }}">{{ a.name }}</option>
     {% endfor %}
@@ -20,14 +16,12 @@
   </select>
 
   <br><br>
-
-
-  <!-- Quota -->
+  
   <label>Quota</label><br>
 
   <select name="quota" required>
 
-    <option value="">-- Select Quota --</option>
+    <option value="">Select Quota</option>
 
     <option value="KCET">KCET</option>
     <option value="COMEDK">COMEDK</option>

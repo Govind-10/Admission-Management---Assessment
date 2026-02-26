@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Add Quota</h3>
+
+<form method="post" class="card p-3 mb-4 shadow">
+
+  <div class="mb-2">
+    <input
+      class="form-control"
+      name="name"
+      placeholder="Quota Name (KCET / COMEDK / MGMT)"
+      required>
+  </div>
+
+  <div class="mb-2">
+    <input
+      class="form-control"
+      name="seats"
+      placeholder="Total Seats"
+      required>
+  </div>
+
+  <button class="btn btn-success">Add Quota</button>
+
+</form>
+
+<h4>Quotas</h4>
+
+<ul class="list-group">
+
+{% for q in quotas %}
+  <li class="list-group-item">
+    {{ q.name }} ({{ q.filled }}/{{ q.seats }})
+  </li>
+{% endfor %}
+
+</ul>
+
+{% endblock %}

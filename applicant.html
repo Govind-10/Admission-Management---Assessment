@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Add Applicant</h3>
+
+<form method="post" class="card p-3 mb-4 shadow">
+
+  <div class="mb-2">
+    <input
+      class="form-control"
+      name="name"
+      placeholder="Student Name"
+      required>
+  </div>
+
+  <div class="mb-2">
+    <input
+      class="form-control"
+      name="marks"
+      placeholder="Marks"
+      required>
+  </div>
+
+  <div class="mb-2">
+    <input
+      class="form-control"
+      name="quota"
+      placeholder="KCET / COMEDK / MGMT"
+      required>
+  </div>
+
+  <button class="btn btn-primary">Add</button>
+
+</form>
+
+<h4>Applicants</h4>
+
+<table class="table table-bordered">
+
+<tr>
+  <th>ID</th>
+  <th>Name</th>
+  <th>Marks</th>
+  <th>Quota</th>
+</tr>
+
+{% for a in applicants %}
+<tr>
+  <td>{{ a.id }}</td>
+  <td>{{ a.name }}</td>
+  <td>{{ a.marks }}</td>
+  <td>{{ a.quota }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+{% endblock %}

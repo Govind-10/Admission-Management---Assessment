@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Add Program</h3>
+
+<form method="post" class="card p-3 mb-4 shadow">
+
+  <div class="mb-2">
+    <input
+      class="form-control"
+      name="name"
+      placeholder="Program Name"
+      required>
+  </div>
+
+  <div class="mb-2">
+    <input
+      class="form-control"
+      name="intake"
+      placeholder="Total Intake"
+      required>
+  </div>
+
+  <button class="btn btn-success">Add</button>
+
+</form>
+
+<h4>Programs</h4>
+
+<ul class="list-group">
+
+{% for p in programs %}
+  <li class="list-group-item">
+    {{ p.name }} - {{ p.intake }}
+  </li>
+{% endfor %}
+
+</ul>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Dashboard</h3>
+
+<div class="row text-center">
+
+  <div class="col-md-4">
+    <div class="card p-3 shadow">
+      <h5>Programs</h5>
+      <h2>{{ programs }}</h2>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card p-3 shadow">
+      <h5>Applicants</h5>
+      <h2>{{ applicants }}</h2>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card p-3 shadow">
+      <h5>Admissions</h5>
+      <h2>{{ admissions }}</h2>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
